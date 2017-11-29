@@ -4,8 +4,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class LoginGeneratorTest {
 
     private LoginGenerator aLoginGenerator;
@@ -22,4 +20,11 @@ public class LoginGeneratorTest {
         Assert.assertEquals("PDUR",login);
     }
 
+    @Test
+
+    public void generateLoginForJRAL2() throws Exception {
+
+        String login = aLoginGenerator.generateLoginForNomAndPrenom("Ralling", "John");
+        Assert.assertEquals("JRAL2", login);
+    }
 }
